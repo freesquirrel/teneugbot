@@ -1,6 +1,5 @@
 import discord #모듈 불러오기
-imoprt os
-token = "access_token" #봇 토큰 설정하기
+token = "OTYyNzkxODI4MDE1NDE5NDUy.YlMrww.mE7OCpMN6w0NTDia8LJ8lbBU7WE" #봇 토큰 설정하기
 client = discord.Client() #cLient 설정하기
 
 @client.event
@@ -49,5 +48,5 @@ async def on_ready():
 @tasks.loop(seconds=5)    # n초마다 다음 메시지 출력
 async def change_status():
     await client.change_presence(activity=discord.Game(next(status)))
-access_token = os.environ["BOT_TOKEN"]
+    
 client.run(token)
